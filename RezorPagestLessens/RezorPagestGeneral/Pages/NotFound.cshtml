@@ -1,0 +1,19 @@
+﻿@page
+@model RazorPagestGeneral.Pages.NotFoundModel
+@{
+    ViewData["Title"] = "NotFound";
+}
+
+
+<div class="row" >
+    <div class="col text-center">
+        <img src="~/images/NotFound.png" alt="Page can not be found"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+       <h1> Стрианица не найдена</h1>
+        <a asp-page="/Employes/Employes" class="btn btn-primary"> Перейти к странице с персоналом</a>
+    </div>
+</div>

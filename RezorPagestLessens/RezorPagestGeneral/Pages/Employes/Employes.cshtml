@@ -1,0 +1,44 @@
+﻿@page
+@model RezorPagestGeneral.Pages.Employes.EmployesModel
+@{
+    ViewData["Title"] = "Employees";
+    ViewData["ShowButtons"] = true;
+}
+
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success text-center"> @TempData["SuccessMessage"] </div>
+}
+
+<form method="get" class="mr-3">
+    <div class="input-group">
+        <input class="form-control" asp-for="SearchTerm" />
+        <div class=" input-group-append">
+            <button type="submit" class="btn-primary">Search</button>
+        </div>
+
+    </div>
+</form>
+
+<div class="mr-3 mt-2">
+    @await Component.InvokeAsync("HeadCount")
+    <hr />
+</div>
+
+
+<h3 class="mt-5"> Employess</h3>
+
+<div class="row  ">
+
+
+    @foreach (var item in Model.Employes)
+    {
+        <div class="col-12 col-sm-6 col-lg-4">
+            <partial name="_DisplayEmployeeParshal" model="@item" view-data="ViewData" />
+        </div>
+    }
+
+
+
+</div>

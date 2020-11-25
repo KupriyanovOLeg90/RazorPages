@@ -1,0 +1,9 @@
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\bin\Debug\netstandard2.1\RazorPagesLessons.Models.deps.json
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\bin\Debug\netstandard2.1\RazorPagesLessons.Models.dll
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\bin\Debug\netstandard2.1\RazorPagesLessons.Models.pdb
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\obj\Debug\netstandard2.1\RazorPagesLessons.Models.csprojAssemblyReference.cache
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\obj\Debug\netstandard2.1\RazorPagesLessons.Models.AssemblyInfoInputs.cache
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\obj\Debug\netstandard2.1\RazorPagesLessons.Models.AssemblyInfo.cs
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\obj\Debug\netstandard2.1\RazorPagesLessons.Models.csproj.CoreCompileInputs.cache
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\obj\Debug\netstandard2.1\RazorPagesLessons.Models.dll
+C:\Users\Terla\source\repos\RezorPagestLessens\RazorPagesLessons.Models\obj\Debug\netstandard2.1\RazorPagesLessons.Models.pdb

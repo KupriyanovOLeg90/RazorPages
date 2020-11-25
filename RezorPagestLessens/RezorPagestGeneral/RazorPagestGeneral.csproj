@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\avatar.png" />
+    <None Include="wwwroot\images\avatar2.png" />
+    <None Include="wwwroot\images\avatar3.png" />
+    <None Include="wwwroot\images\avatar4.png" />
+    <None Include="wwwroot\images\avatar5.png" />
+    <None Include="wwwroot\images\banner.jpg" />
+    <None Include="wwwroot\images\LessonsCoreLogo.png" />
+    <None Include="wwwroot\images\noimage.png" />
+    <None Include="wwwroot\images\NotFound.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RazorPagesLessons.Models\RazorPagesLessons.Models.csproj" />
+    <ProjectReference Include="..\RazorPagesLessons.Services\RazorPagesLessons.Services.csproj" />
+  </ItemGroup>
+
+</Project>
