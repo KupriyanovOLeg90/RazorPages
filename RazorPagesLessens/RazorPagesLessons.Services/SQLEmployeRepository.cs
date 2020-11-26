@@ -1,4 +1,5 @@
-﻿using RazorPagesLessons.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using RazorPagesLessons.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,18 @@ namespace RazorPagesLessons.Services
             _context = context;
         }
 
+        //public Employe Add(Employe newEmploye)
+        //{
+        //    _context.Employes.Add(newEmploye);
+        //    _context.SaveChanges();
 
+        //    return newEmploye;
+        //}
 
         public Employe Add(Employe newEmploye)
         {
-            _context.Employes.Add(newEmploye);
-            _context.SaveChanges();
+            _context.Database.ExecuteSqlRaw("spAddNewEmployee {0}, {1}, {2}, {3}", 
+                newEmploye.Name, newEmploye.Email, newEmploye.PhotoPath, newEmploye.Department);
 
             return newEmploye;
         }
@@ -51,12 +58,19 @@ namespace RazorPagesLessons.Services
 
         public IEnumerable<Employe> GetAllEmpoyes()
         {
-            return _context.Employes;
+            //return _context.Employes;
+
+            return _context.Employes
+                    .FromSqlRaw<Employe>("Select * from Employees").ToList();
         }
 
         public Employe GetEmployee(int Id)
         {
-            return _context.Employes.FirstOrDefault(x => x.Id == Id);
+            //return _context.Employes.FirstOrDefault(x => x.Id == Id);
+
+            return _context.Employes
+                    .FromSqlRaw<Employe>("CodeFirstSpGetEmployeeById {0}", Id)
+                    .ToList().FirstOrDefault();
         }
 
         public IEnumerable<Employe> SearchEmpoyes(string searchTerm)
